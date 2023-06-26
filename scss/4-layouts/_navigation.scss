@@ -1,0 +1,55 @@
+$white: map-get($colors , 'white' );
+$red: map-get($colors , 'red' );
+.nav{
+    @include d-flex-gap-1;
+    justify-content: $flex-space-between;
+    color: $white;
+    background-color: black;
+    a{
+        text-decoration: none;
+        color: $white;
+        &:hover{
+            border-top: 1px solid $red;
+            border-bottom: 1px solid $red;
+        }
+    }
+    .logo{
+        font-size: $font-size-lg;
+        &:hover{
+            color: $red
+        }
+    }
+    ul{
+        @include d-flex-gap-2; 
+        align-items: $flex-center;
+    }
+}
+
+#nav__menu-icon{
+    display: none;
+}
+
+@include md {
+    #nav__menu-icon{
+        display: block;
+        font-size: $font-size-xl;
+        color: $white;
+    }
+
+    ul{
+        @include d-flex-gap-2;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        margin-top: 3rem;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.719);
+        transition: 0.3s;
+        z-index: 2;
+    }
+
+    ul.active{
+        left: 0;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sass practice</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="nav p-1">
+        <div class="logo ml-2 fw-900">Usama Hassan</div>
+
+        <ul class="mr-3" id="nav__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><button class="btn-1" role="button">Login</button></li>
+            <li><button class="btn-1" role="button">sign up</button></li>
+        </ul>
+
+        <a href="#" id="nav__menu-icon">|||</a>
+    </nav>
+    <section class="hero">
+        <div class="hero__background-image display-f pt-2">
+            <div class="hero__inner-content container">
+                <h1 class="fs-xxl mb-2">Website</h1>
+                <div class="hero__inner-content-para">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut, ducimus! Quidem ducimus numquam quis dolores ipsa saepe aspernatur nulla omnis error sint cum voluptate doloribus quo assumenda ullam, repellat soluta.</p>
+                    <button class="btn-1 mt-2" role="button">Hire Me</button>
+                </div>
+            </div> 
+            <div class="hero__image o-80"><img src="assets/laptop.svg" alt="laptop"></div>
+        </div>
+    </section>
+
+    <main class="main">Something</main>
+
+    <script>
+        const menu = document.getElementById('nav__menu-icon');
+        const navList = document.getElementById("nav__list");
+
+        menu.addEventListener('click',()=>{
+            navList.classList.toggle('active');
+        })
+    </script>
+</body>
+</html>
